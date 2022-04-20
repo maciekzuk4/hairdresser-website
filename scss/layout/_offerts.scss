@@ -1,0 +1,66 @@
+@use "../abstracts/colors"as *;
+@use "../abstracts/typography"as *;
+@use "../abstracts/brakepoints"as br;
+
+.offerts {
+  background-color: $beige;
+
+  h1 {
+    color: $black
+  }
+
+  h3 {
+    color: $black
+  }
+
+  p {
+    color: #4d4d4d
+  }
+
+  position: relative;
+
+  .design {
+    width: 100%;
+    display: block;
+
+    img {
+      position: absolute;
+      width: 120%;
+      max-width: 400px;
+    }
+
+    .circle1 {
+      top: 110px;
+      left: -90%;
+
+      @media (min-width: br.$md) {
+        left: -30%;
+        top: 0;
+      }
+    
+      @media (min-width: br.$xl) {
+        left: -20%;
+      }
+      @media (min-width: br.$xxl) {
+        left: -15%;
+      }
+    }
+
+    .circle2 {
+      bottom: 130px;
+      right: -90%;
+
+      @media (min-width: br.$md) {
+        right: -30%;
+        bottom: 100px;
+      }
+
+      @media (min-width: br.$xl) {
+        right: -20%;
+      }
+      @media (min-width: br.$xxl) {
+        right: -15%;
+      }
+    }
+  }
+}

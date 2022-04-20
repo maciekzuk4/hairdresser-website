@@ -1,0 +1,32 @@
+@use 'base/_root';
+@use 'base/wrapper';
+@use "components/_navigation";
+@use "components/_buttons";
+@use "components/_card";
+@use "components/_gallery-card";
+@use "components/_footer";
+@use "components/_price";
+@use "sections/_cards-section";
+@use "sections/_two-side-section";
+@use "sections/options-section";
+@use "layout/_landingPage";
+@use "layout/offerts";
+@use "layout/_whyUs";
+@use "layout/_products";
+@use "layout/_qualifications";
+@use "layout/_aboutUs";
+@use "layout/_priceList";
+@use "components/_hamburger-menu";
+
+//TODO: Upiększyć kod
+//TODO: Zrobić porządek w strukturze plików, przemyśleć nazewnictwo
+//TODO: Dodać animację w każdej galerii
+//TODO: Sprawdzić na koniec wydajność strony
+//TODO: Dodać regulamin w stpoce
+//TODO: Usprawnić kod javascript (jeśli możliwe)
+//TODO: Dodac elementy hoover w wersji large 
+//TODO: Scroll behavior na safari 
+//TODO: Dokończyć tłumaczenie na pozostałych podstronach
+
+//BUG: Navbar w momencie mocnego scrolla w górę, uderzając o górny margines, zostawia po sobię białe tło na ułamek sekundy.
+//BUG: Podczas wysuwaniętego menu, istnieje opcja scrollowania. W momencie scrollowania na samą górę strony, navbar wyświetlany jest podwójnie.

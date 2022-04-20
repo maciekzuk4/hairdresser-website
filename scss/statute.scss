@@ -1,0 +1,31 @@
+@use "base/_root";
+@use "base/_wrapper";
+@use "abstracts/colors";
+@use "abstracts/_brakepoints" as br;
+@use "abstracts/_typography";
+@use "components/_footer";
+
+.statute{
+    padding: 50px 0;
+    @media (min-width: br.$md) {
+        padding: 100px 0;
+      }
+      @media (min-width: br.$lg) {
+        padding: 150px 0;
+      }
+    &__title{
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 30px 0;
+        @media (min-width: br.$md) {
+            font-size: 2em;
+          }
+    }
+    &__subsection{
+        padding: 10px 0;
+        font-size: .8em;
+        @media (min-width: br.$md) {
+            font-size: .9em;
+          }
+    }
+}

@@ -1,0 +1,43 @@
+@use 'base/_root';
+@use 'base/wrapper';
+@use "components/_footer";
+@use "components/_card";
+@use "layout/newsPage";
+@use "abstracts/colors" as *;
+
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__header{
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        padding: 5px 0
+    }
+
+    &__underline {
+        width: 70%;
+        margin: 0 auto;
+        height: 4px;
+        background-color: $beige;
+        border-radius: 50px;
+    }
+
+}

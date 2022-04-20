@@ -1,0 +1,74 @@
+@use "../abstracts/colors"as *;
+@use "../abstracts/typography"as *;
+@use "../abstracts/_mixins"as *;
+@use "../abstracts/brakepoints" as br;
+
+.options-section {
+    @include flex-center;
+    width: 100%;
+    background-color: $green;
+    padding: 50px 0 100px 0;
+    @media (min-width: br.$md) {
+        font-size: 23px;
+      }
+      @media (min-width: br.$lg) {
+          font-size: 20px;
+        padding: 150px 0 200px;
+      }
+    &__header {
+        font-size: 1.6em;
+        text-transform: uppercase;
+        color: $white;
+        padding: 40px 0;
+        @media (min-width: br.$lg) {
+            font-size: 1.8em;
+          }
+    }
+
+    &__container {
+        @include flex-center;
+        gap: 20px;
+    }
+
+    &__options {
+        @include flex-center;
+        gap: 50px;
+        @media (min-width: br.$lg) {
+            flex-direction: row;
+            justify-content: space-evenly;
+          }
+    }
+
+    &__option {
+        @include flex-center;
+        text-align: center;
+        gap: 15px;
+        max-width: 80%;
+        @media (min-width: br.$md) {
+            max-width: 300px;
+          }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 1em;
+      
+    }
+
+    &__description {
+        color: #b8b8b8;
+    }
+
+    &__icon {
+        width: 40%;
+        padding: 15px 0;
+    }
+
+    &__underline {
+        height: 4px;
+        background-color: $green;
+        width: 60%;
+        border-radius: 100px;
+    }
+}

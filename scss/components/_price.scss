@@ -1,0 +1,96 @@
+// Komponent elementu cennika
+
+@use "../abstracts/colors"as *;
+@use "../abstracts/_typography"as *;
+@use "../abstracts/_mixins"as *;
+@use "../abstracts/brakepoints" as br;
+
+.option {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0;
+    min-width: 288px;
+    @media (min-width: 768px) {
+        font-size: 23px;
+    }
+    &__title,
+    &__price {
+        text-transform: uppercase;
+        font-size: .8em;
+
+    }
+
+    &__title {
+        width: 67%;
+    }
+
+    &__price {
+        width: 31%;
+        height: 100%;
+        text-align: right;
+        color: $grey
+    }
+
+    &__timeContainer {
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 50%;
+            justify-content: flex-end;
+        }
+    }
+
+    &__time {
+        font-weight: 400;
+        margin-left: 10px;
+        color: $green;
+        font-size: .7em;
+
+    }
+
+    &__description {
+        font-size: .7em;
+        color: #757575;
+        width: 70%;
+        padding: 5px 0;
+    }
+
+    &__firstLine {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+
+    &__secondLine {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
+
+    }
+
+    &__price {
+        align-self: flex-end;
+        justify-self: flex-end;
+        text-transform: capitalize;
+
+    }
+
+    &__icon {
+        width: 20px;
+    }
+
+}

@@ -1,0 +1,32 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/_mixins" as *;
+@use "../abstracts/brakepoints"as br;
+
+.qualifications{
+    background-color: $white;
+    position: relative;
+    overflow: hidden;
+    .design{
+        img{
+            position: absolute;
+            width: 100%;
+            max-width: 300px;
+        }
+        .lines1{
+            top: -10px;
+            left: -150px;
+            @media (min-width: br.$lg) {
+                left: -75px
+            }
+            
+        }
+        .lines2{
+            bottom:-10px;
+            right: -150px;
+            @media (min-width: br.$lg) {
+                right: -90px
+            }
+        }
+    }
+}

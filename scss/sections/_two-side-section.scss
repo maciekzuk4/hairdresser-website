@@ -1,0 +1,91 @@
+@use "../abstracts/colors"as *;
+@use "../abstracts/typography"as *;
+@use "../abstracts/brakepoints"as br;
+
+.two-side-section {
+    background-color: $beige;
+    width: 100%;
+    padding: 120px 0;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (min-width: br.$md) {
+        font-size: 23px;
+    }
+    @media (min-width: br.$lg) {
+        padding: 180px 0;
+    }
+
+    
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+       
+        @media (min-width: br.$md) {
+            width: 70%;
+        }
+        @media (min-width: br.$lg) {
+            width: 85%;
+            // background-color: green;
+            flex-direction: row;
+            gap: 80px;
+        }
+
+        
+
+    }
+
+    .reverse{
+        @media (min-width: br.$lg) {
+        flex-direction: row-reverse
+        }
+    }
+
+    &__icon {
+        width: 70%;
+
+        @media (min-width: br.$md) {
+            width: 50%;
+        }
+        @media (min-width: br.$lg) {
+            width: 35%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        @media (min-width: br.$md) {
+            width: 90%;
+        }
+        @media (min-width: br.$lg) {
+            gap: 20px;
+            align-items: flex-start;
+            text-align: left;
+            width: 70%;
+            
+        }
+    }
+
+    &__header {
+        font-size: 1.7em;
+        text-transform: uppercase;
+        padding: 15px 0;
+    }
+
+    .button {
+        margin: 10px 0;
+    }
+
+
+
+}

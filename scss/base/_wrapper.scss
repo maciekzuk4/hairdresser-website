@@ -1,0 +1,22 @@
+// Główny wrapper strony
+
+@use "../abstracts/container-max-width"as cmw;
+@use "../abstracts/brakepoints"as br;
+
+.wrapper {
+  width: 288px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: br.$md) {
+    width: cmw.$md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: br.$lg) {
+    width: cmw.$lg;
+  }
+}

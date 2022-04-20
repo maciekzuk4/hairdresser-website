@@ -1,0 +1,212 @@
+@use "../abstracts/colors"as *;
+@use "../abstracts/typography"as *;
+@use "../abstracts/brakepoints"as br;
+
+
+.landingPage {
+  height: 100vh;
+  overflow: hidden;
+  min-height: 750px;
+  max-height: 800px;
+
+  @media (min-width: br.$md) {
+    max-height: 900px;
+    min-height: 900px;
+  }
+
+  @media (min-width: br.$lg) {
+    max-height: none;
+    min-height: 750px;
+  }
+
+  @media (min-width: br.$xxl) {
+    max-height: none;
+    min-height: 900px;
+  }
+
+  .wrapper {
+    height: 100%
+  }
+
+  .bigLogo {
+    width: 80%;
+
+    @media (min-width: br.$md) {
+      width: 85%;
+    }
+
+    @media (min-width: br.$lg) {
+      width: 100%;
+    }
+  }
+
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      background-color: $green;
+      display: block;
+      content: " ";
+      width: 1000px;
+      height: 300px;
+      position: absolute;
+      transform: rotate(-20deg);
+      top: -275px;
+      @media (min-width: br.$md) {
+      width: 1500px;
+        top: -220px;
+      }
+      @media (min-width: br.$lg) {
+        transform: rotate(-70deg);
+        left: -800px;
+      }
+      @media (min-width: br.$xl) {
+       left: -1900px;
+       width: 1750px;
+       height: 1500px;
+      }
+      @media (min-width: br.$xxl) {
+        left: -2000px;
+        height: 1500px;
+       }
+    }
+
+    &::after{
+        background-color: $green;
+        display: none;
+        content: " ";
+        width: 1000px;
+        height: 300px;
+        position: absolute;
+        transform: rotate(-20deg);
+        top: -275px;
+        z-index: -1;
+        @media (min-width: br.$lg) {
+          transform: rotate(-70deg);
+          right: -1500px;
+          top: 0px;
+          width: 1500px;
+          height: 1500px;
+          display: block;
+        }
+        @media (min-width: br.$xl) {
+         right: -1500px;
+         height: 1500px;
+        }
+        @media (min-width: br.$xxl) {
+          right: -2200px;
+          width: 2000px;
+          height: 2000px;
+         }
+    }
+
+    @media (min-width: br.$md) {
+      // max-height: 725px;
+    }
+
+    @media (min-width: br.$lg) {
+      flex-direction: row;
+
+    }
+
+    
+
+    &__logoContainer {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      position: absolute;
+      justify-self: center;
+      top: 15%;
+
+      @media (min-width: br.$md) {
+        top: 20%;
+      }
+
+      @media (min-width: br.$lg) {
+        top: auto;
+        left: 10vh;
+      }
+
+      @media (min-width: br.$xl) {
+        left: 0;
+      }
+
+      @media (min-width: br.$xxl) {
+        // left: 75px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: $beige;
+        position: absolute;
+        top: -20px;
+        left: -500px;
+        transform: rotate(-20deg);
+        width: 1200px;
+        height: 300px;
+        z-index: -1;
+
+        @media (min-width: br.$md) {
+          width: 1500px;
+          height: 350px;
+          top: -75px;
+        }
+
+        @media (min-width: br.$lg) {
+          transform: rotate(-70deg);
+          height: 400px;
+          left: -600px
+        }
+
+        @media (min-width: br.$xxl) {
+          width: 1700px;
+          left: -675px;
+        }
+      }
+    }
+  }
+
+  .drawing {
+    width: 125%;
+    position: absolute;
+    bottom: 0;
+
+    @media (min-width: br.$md) {
+      width: 56%;
+    }
+
+    @media (min-width: br.$lg) {
+      min-width: 600px;
+      width: 65vh;
+      // left: 30vh;
+      right: -5vh;
+      max-width: 600px;
+    }
+
+    @media (min-width: br.$xl) {
+      max-width: 700px;
+    }
+
+    @media (min-width: br.$xxl) {
+      min-width: 750px;
+      max-width: 1000px;
+      right: -20vh;
+    }
+  }
+
+
+  .stripe {
+    width: 100%;
+    min-width: 500px;
+    position: absolute;
+  }
+
+}

@@ -1,0 +1,71 @@
+// Komponent karty z aktualnościami
+
+@use "../abstracts/colors"as *;
+@use "../abstracts/typography"as *;
+@use "../abstracts/brakepoints" as br;
+
+.card {
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  background-color: $beige;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  position: relative;
+  border-radius: 15px;
+  transition: .3s linear;
+
+  &__content {
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -25px 50px -12px;
+    @media (min-width: br.$md) {
+      height: 65px;
+      border-radius: 25px;
+    }
+  }
+
+  &__title {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    h4 {
+      margin-left: 15px;
+      @media (min-width: br.$md) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__time {
+    height: 100%;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  &__date {
+    color: $lightGrey;
+  }
+
+  &__icon {
+    height: 25%;
+    margin-right: 5px;
+  }
+  @media (min-width: br.$md) {
+    height: 400px;
+    max-width: 300px;
+    border-radius: 25px;
+    font-size: 23px;
+  }
+}

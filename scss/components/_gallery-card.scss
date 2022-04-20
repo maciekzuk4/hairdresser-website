@@ -1,0 +1,64 @@
+// Komponent karty odnoszącej do galerii
+
+@use "../abstracts/colors"as *;
+@use "../abstracts/typography"as *;
+@use "../abstracts/_mixins"as *;
+@use "../abstracts/brakepoints" as br;
+
+
+.gallery-card {
+    width: 100%;
+    max-width: 250px;
+    @include flex-center;
+
+    &__container {
+        width: 100%;
+        height: 350px;
+        min-height: 300px;
+
+    }
+
+    &__background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include flex-center;
+    }
+
+    &__icon {
+        width: 30%;
+        bottom: 0;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        padding: .7em
+    }
+
+    .card1 {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+            url("../../sources/photos/color.jpg");
+    }
+
+    .card2 {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+            url("../../sources/photos/shave.jpg");
+    }
+
+    .card3 {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+            url("../../sources/photos/botox.jpg");
+    }
+    @media (min-width: br.$md) {
+        height: 450px;
+        max-width: 300px;
+        border-radius: 25px;
+        font-size: 23px;
+      }
+}

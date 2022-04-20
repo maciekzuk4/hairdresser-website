@@ -1,0 +1,36 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/brakepoints"as br;
+.whyUs{
+  background-color: $green;
+  position: relative;
+  overflow: hidden;
+  .design{
+      img{
+          position: absolute;
+          width: 50%;
+          max-width: 300px;
+      }
+
+      .circle1{
+          top:-20px;
+          left: -10%;
+          @media (min-width: br.$lg) {
+            left: -10%;
+        }
+        @media (min-width: br.$xl) {
+            left: -5%;
+        }
+      }
+      .circle2{
+          bottom:-20px;
+          right: -10%;
+          @media (min-width: br.$lg) {
+            right: -10%;
+        }
+        @media (min-width: br.$xl) {
+            right: -5%;
+        }
+      }
+  }
+}

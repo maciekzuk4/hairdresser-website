@@ -1,0 +1,51 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/_typography" as *;
+@use "../abstracts/_mixins" as *;
+@use "../abstracts/brakepoints" as br;
+
+
+.prices{
+    .wrapper{
+        height: auto;
+    }
+    background-color: $beige;
+    padding: 50px 0;
+    @media (min-width: br.$md) {
+        font-size: 23px;
+    }
+    @media (min-width: br.$lg) {
+        font-size: 25px;
+    }
+    &__title{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 0;
+        @media (min-width: br.$md) {
+            padding: 40px 0;
+        }
+    }
+
+    .section{
+        &__title{
+            text-transform: uppercase;
+            padding: 20px 0;
+            text-align: center;
+            @media (min-width: br.$md) {
+                padding: 40px 0;
+            }
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

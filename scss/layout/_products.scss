@@ -1,0 +1,41 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/brakepoints"as br;
+
+.products{
+    background-color: $white;
+    position: relative;
+    overflow: hidden;
+    .design{
+        img{
+            position: absolute;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        .circle1{
+            top:-100px;
+            left: -20%;
+            @media (min-width: br.$lg) {
+                left: -10%;
+                top: -150px;
+            }
+            @media (min-width: br.$xl) {
+                top: -150px;
+                left: -10%;
+            }
+        }
+        .circle2{
+            bottom:-100px;
+            right: -20%;
+            @media (min-width: br.$lg) {
+                bottom: -150px;
+                right: -10%;
+            }
+            @media (min-width: br.$xl) {
+                bottom: -150px;
+                right: -10%;
+            }
+        }
+    }
+}
